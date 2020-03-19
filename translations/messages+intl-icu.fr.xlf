@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="fr" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="_MdsJvn" resname="app.global.copyright">
+        <source>app.global.copyright</source>
+        <target>Copyright © 2020</target>
+      </trans-unit>
+      <trans-unit id="Y2SFhol" resname="author">
+        <source>author</source>
+        <target>Redwan Kara</target>
+      </trans-unit>
+      <trans-unit id="wgdj8zB" resname="app.global.home">
+        <source>app.global.home</source>
+        <target>Accueil</target>
+      </trans-unit>
+      <trans-unit id="Qqifhj0" resname="app.global.about">
+        <source>app.global.about</source>
+        <target>A propos</target>
+      </trans-unit>
+      <trans-unit id="sR0Lkj6" resname="app.global.services">
+        <source>app.global.services</source>
+        <target>Compétences</target>
+      </trans-unit>
+      <trans-unit id="UR2Lx60" resname="app.global.portfolio">
+        <source>app.global.portfolio</source>
+        <target>Portfolio</target>
+      </trans-unit>
+      <trans-unit id="txbXGAJ" resname="app.global.contact">
+        <source>app.global.contact</source>
+        <target>Me contacter</target>
+      </trans-unit>
+      <trans-unit id="2NbGCkB" resname="app.home.header.title">
+        <source>app.home.header.title</source>
+        <target>Développement web et mobile sur mesure.</target>
+      </trans-unit>
+      <trans-unit id="cJG9kmO" resname="app.home.header.subtitle">
+        <source>app.home.header.subtitle</source>
+        <target>Conception de solutions pour les problématiques métiers les plus sécifiques.</target>
+      </trans-unit>
+      <trans-unit id="nuGqVOs" resname="app.home.header.about_button">
+        <source>app.home.header.about_button</source>
+        <target>A propos de moi</target>
+      </trans-unit>
+      <trans-unit id="v33ZW5y" resname="app.home.about.paragraph">
+        <source>app.home.about.paragraph</source>
+        <target>De formation supérieure en informatique, j'ai obtenu un DUT Informatique en 2019. En parallèle de mes études j'ai créé ma micro-entreprise de développement et conception de solutions prêtes à l'emploi. Actuellement en école d'Ingénieur en alternance, je me spécialise dans le développement web et mobile sur mesure. Et voici l'entreprise dans laquelle j'évolue :</target>
+      </trans-unit>
+      <trans-unit id="qVmtKev" resname="app.home.call_to_action.first_button">
+        <source>app.home.call_to_action.first_button</source>
+        <target>Prendre la pillule noire.</target>
+      </trans-unit>
+      <trans-unit id="xiAlJAi" resname="app.home.call_to_action.second_button">
+        <source>app.home.call_to_action.second_button</source>
+        <target>Prendre la pillule blanche.</target>
+      </trans-unit>
+      <trans-unit id="JTNyCFY" resname="app.home.callout.title">
+        <source>app.home.callout.title</source>
+        <target>A part le dev, j'ai aussi une vie !</target>
+      </trans-unit>
+      <trans-unit id="PCiqNgb" resname="app.home.portfolio.subtitle">
+        <source>app.home.portfolio.subtitle</source>
+        <target>Quelques unes de mes réalisations. **(voir conditions, page 534 alinéa 8 de mes CGU)</target>
+      </trans-unit>
+      <trans-unit id="yW19b9N" resname="app.home.portfolio.title">
+        <source>app.home.portfolio.title</source>
+        <target>Satisfait ou remboursé**</target>
+      </trans-unit>
+      <trans-unit id="1uBblAD" resname="app.home.about.link">
+        <source>app.home.about.link</source>
+        <target>Integral System</target>
+      </trans-unit>
+      <trans-unit id="2mpDZSN" resname="app.home.about.services_button">
+        <source>app.home.about.services_button</source>
+        <target>Voir mes compétences</target>
+      </trans-unit>
+      <trans-unit id="HTNgfnN" resname="app.home.services.subtitle">
+        <source>app.home.services.subtitle</source>
+        <target>Le backend je préfère, mon frontend je m'éforce de perfectionner.</target>
+      </trans-unit>
+      <trans-unit id="8ibT1P2" resname="app.home.services.title">
+        <source>app.home.services.title</source>
+        <target>Plus ou moins ce que je sais faire :</target>
+      </trans-unit>
+      <trans-unit id="9.fSnNZ" resname="app.home.callout.button">
+        <source>app.home.callout.button</source>
+        <target>Ma galerie photo</target>
+      </trans-unit>
+      <trans-unit id="8cl21ri" resname="app.home.call_to_action.title">
+        <source>app.home.call_to_action.title</source>
+        <target>Orienté vers l'open source, j'essaie d'apporter ma pierre à l'édifice.</target>
+      </trans-unit>
+      <trans-unit id="wy.pen3" resname="app.home.about.title">
+        <source>app.home.about.title</source>
+        <target>Un tout petit peu de moi</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
