@@ -1,4 +1,6 @@
 var Encore = require('@symfony/webpack-encore');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const GoogleFontsPlugin = require('google-fonts-plugin');
 
 // Manually configure the runtime environment if not already configured yet by the "encore" command.
 // It's useful when you use tools that rely on webpack.config.js file.
@@ -32,7 +34,10 @@ Encore
 
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
-    .enableSingleRuntimeChunk()
+    .disableSingleRuntimeChunk()
+
+    .addPlugin(new CopyWebpackPlugin([{ from: './assets/images', to: 'images' }]))
+    .addPlugin(new GoogleFontsPlugin('./fonts-config.json'))
 
     /*
      * FEATURE CONFIG
@@ -54,7 +59,7 @@ Encore
     })
 
     // enables Sass/SCSS support
-    //.enableSassLoader()
+    .enableSassLoader()
 
     // uncomment if you use TypeScript
     //.enableTypeScriptLoader()
@@ -64,7 +69,7 @@ Encore
     //.enableIntegrityHashes(Encore.isProduction())
 
     // uncomment if you're having problems with a jQuery plugin
-    //.autoProvidejQuery()
+    .autoProvidejQuery()
 
     // uncomment if you use API Platform Admin (composer req api-admin)
     //.enableReactPreset()
