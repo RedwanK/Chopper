@@ -1,0 +1,13 @@
+{% block home_header %}
+    <!-- Header -->
+    <header class="masthead d-flex">
+        <div class="container text-center my-auto">
+            <h1 class="mb-1">{{ 'app.home.header.title'|trans }}</h1>
+            <h3 class="mb-5">
+                <em>{{ 'app.home.header.subtitle'|trans }}</em>
+            </h3>
+            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">{{ 'app.home.header.about_button'|trans }}</a>
+        </div>
+        <div class="overlay"></div>
+    </header>
+{% endblock %}

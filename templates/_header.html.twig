@@ -1,0 +1,16 @@
+{% block header %}
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="{{ 'author'|trans }}">
+
+    <title>{{ 'author'|trans }}</title>
+
+    <link href="{{ asset("build/woff.css") }}" rel="stylesheet">
+    <link href="{{ asset("build/woff2.css") }}" rel="stylesheet">
+    {{ encore_entry_link_tags('app') }}
+
+</head>
+{% endblock %}

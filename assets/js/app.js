@@ -5,10 +5,14 @@
  * (and its CSS file) in your base layout (base.html.twig).
  */
 
+import 'jquery-easing/jquery.easing.1.3';
+import 'font-awesome/scss/font-awesome.scss';
+import 'simple-line-icons/scss/simple-line-icons.scss';
+import 'bootstrap';
+import './main';
 // any CSS you import will output into a single css file (app.css in this case)
-import '../css/app.css';
+
+import '../scss/index.scss';
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to import it.
 // import $ from 'jquery';
-
-console.log('Hello Webpack Encore! Edit me in assets/js/app.js');

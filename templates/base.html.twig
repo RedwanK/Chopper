@@ -1,12 +1,17 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
+<html lang="fr">
+    {% include "_header.html.twig" %}
+    {% block header %}{% endblock %}
+
+    <body id="page-top">
+        {% block navigation %}{% endblock %}
+        {% include "_menu.html.twig" %}
+        {% block content %}{% endblock %}
+        {% block footer %}{% endblock %}
+        {% include "_footer.html.twig" %}
         {% block javascripts %}{% endblock %}
     </body>
+
+
 </html>
+
