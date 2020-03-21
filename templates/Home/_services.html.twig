@@ -7,43 +7,24 @@
                 <h2 class="mb-5">{{ 'app.home.services.title'|trans }}</h2>
             </div>
             <div class="row">
+                {% for skill in skills %}
                 <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
                     <span class="service-icon rounded-circle mx-auto mb-3">
-                      <i class="icon-screen-smartphone"></i>
+                      <i class="{{ skill.icon }}"></i>
                     </span>
                     <h4>
-                        <strong></strong>
+                        <strong>{{ skill.name }}</strong>
                     </h4>
-                    <p class="text-faded mb-0"></p>
+                    {{ skill.firstDescription|raw }}
+                    <br/>
+                    <div class="text-faded mb-0">{{ skill.secondDescription|raw }}</div>
+                    {% if skill.link is defined and skill.link is not null %}
+                        <a href="{{ skill.link }}" title="{{ skill.name }}">
+                            <i class="icon-plus"></i>
+                        </a>
+                    {% endif %}
                 </div>
-                <div class="col-lg-3 col-md-6 mb-5 mb-lg-0">
-                    <span class="service-icon rounded-circle mx-auto mb-3">
-                      <i class="icon-pencil"></i>
-                    </span>
-                    <h4>
-                        <strong></strong>
-                    </h4>
-                    <p class="text-faded mb-0"></p>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-5 mb-md-0">
-                    <span class="service-icon rounded-circle mx-auto mb-3">
-                      <i class="icon-like"></i>
-                    </span>
-                    <h4>
-                        <strong></strong>
-                    </h4>
-                    <p class="text-faded mb-0">
-                    </p>
-                </div>
-                <div class="col-lg-3 col-md-6">
-                    <span class="service-icon rounded-circle mx-auto mb-3">
-                      <i class="icon-mustache"></i>
-                    </span>
-                    <h4>
-                        <strong></strong>
-                    </h4>
-                    <p class="text-faded mb-0"></p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </section>

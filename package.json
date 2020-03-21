@@ -16,6 +16,7 @@
         "build": "encore production --progress"
     },
     "dependencies": {
+        "acorn": "^7.1.1",
         "bootstrap": "^4.4.1",
         "copy-webpack-plugin": "^5.1.1",
         "font-awesome": "^4.7.0",
