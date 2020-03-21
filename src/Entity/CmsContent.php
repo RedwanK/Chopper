@@ -9,6 +9,8 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class CmsContent
 {
+    const IMAGE_FIELDS = ['image'];
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -87,5 +89,25 @@ class CmsContent
         $this->image = $image;
 
         return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getImageName() {
+        return $this->getFilename($this->image);
+    }
+
+    /**
+     * @param $path
+     *
+     * @return mixed
+     */
+    private function getFilename($path) {
+        $fileArray = explode('/', $path);
+
+        $fileArray = array_reverse($fileArray);
+
+        return $fileArray[0];
     }
 }

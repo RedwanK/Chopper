@@ -1,0 +1,133 @@
+easy_admin:
+    site_name: '<img src="/build/images/logoRK.jpeg" style="width: 50%" />'
+    user:
+        display_name: false
+        display_avatar: false
+    entities:
+        # List the entity class name you want to manage
+        Projets:
+            class: App\Entity\Project
+            help: "Tous les projets sont répertoriés dans la partie 'Porfolio' du site"
+            label: "Projets"
+            form:
+                title: 'Ajouter un projet'
+                fields:
+                    - { property: 'name', label: 'Nom du projet' }
+                    - { property: 'shortDescription', label: 'Brève description', type: 'text_editor' }
+                    - { property: 'longDescription', label: 'Description longue', type: 'text_editor' }
+                    - { property: 'mainImage', label: 'Image principale', type: 'file_upload', type_options:{ upload_filename: '[name]_[uuid]_[contenthash].[extension]', download_path: 'files/' } }
+                    - { property: 'secondImage', label: 'Image secondaire', type: 'file_upload', type_options:{ upload_filename: '[name]_[uuid]_[contenthash].[extension]', download_path: 'files/' } }
+                    - { property: 'thirdImage', label: 'Image tertiaire', type: 'file_upload', type_options:{ upload_filename: '[name]_[uuid]_[contenthash].[extension]', download_path: 'files/' } }
+                    - { property: 'githubLink', label: 'Lien Github' }
+                    - { property: 'url', label: 'Lien' }
+                    - { property: 'authors', label: 'Auteurs' }
+                    - { property: 'duration', label: 'Durée du projet' }
+                    - { property: 'client', label: 'Client' }
+                    - { property: 'technologies', label: 'Technologies' }
+                    - { property: 'platform', label: 'Plateforme cible' }
+                    - { property: 'prefered', label: 'Mettre en avant' }
+            list:
+                title: "Tous les projets"
+                fields:
+                    - 'id'
+                    - { property: 'name', label: 'Nom du projet' }
+                    - { property: 'shortDescription', label: 'Brève description' }
+                    - { property: 'mainImage', label: 'Image principale', type: 'image', base_path: '' }
+                    - { property: 'url', label: 'Lien' }
+                    - { property: 'technologies', label: 'Technologies' }
+            search:
+                fields:
+                    - 'id'
+                    - { property: 'name', label: 'Nom du projet' }
+                    - { property: 'shortDescription', label: 'Brève description' }
+                    - { property: 'mainImage', label: 'Image principale', type: 'image' }
+                    - { property: 'url', label: 'Lien' }
+                    - { property: 'technologies', label: 'Technologies' }
+            show:
+                title: '%%entity_label%% (#%%entity_id%%)'
+
+        Activites:
+            class: App\Entity\Activities
+            help: "Toutes les activités sont répertoriées dans la partie 'Galerie' du site"
+            label: "Activités"
+            form:
+                fields:
+                    - { property: 'name', label: 'Nom de l''activité' }
+                    - { property: 'description', label: 'Description', type: 'text_editor' }
+                    - { property: 'image', label: 'Image', type: 'file_upload', type_options:{ upload_filename: '[name]_[uuid]_[contenthash].[extension]', download_path: 'files/' } }
+            list:
+                title: "Liste des activités"
+                fields:
+                    - 'id'
+                    - { property: 'name', label: 'Nom de l''activité' }
+                    - { property: 'image', label: 'Image', type: 'image' }
+            show:
+                title: '%%entity_label%% (#%%entity_id%%)'
+                fields:
+                    - 'id'
+                    - { property: 'name', label: 'Nom de l''activité' }
+                    - { property: 'image', label: 'Image', type: 'image' }
+            search:
+                fields:
+                    - 'id'
+                    - { property: 'name', label: 'Nom de l''activité' }
+                    - { property: 'image', label: 'Image', type: 'image' }
+
+        Competences:
+            class: App\Entity\Skills
+            help: "Toutes les activités sont répertoriées dans la partie 'Compétences' du site"
+            label: "Compétences"
+            form:
+                fields:
+                    - { property: 'name', label: 'Nom de la compétence' }
+                    - { property: 'icon', label: 'Classe CSS de l''icône' }
+                    - { property: 'firstDescription', label: 'Première description', type: 'text_editor' }
+                    - { property: 'secondDescription', label: 'Seconde description', type: 'text_editor' }
+                    - { property: 'link', label: 'Lien' }
+            list:
+                title: "Liste des compétences"
+                fields:
+                    - 'id'
+                    - { property: 'name', label: 'Nom de la compétence' }
+                    - { property: 'icon', label: 'Classe CSS de l''icône' }
+                    - { property: 'firstDescription', label: 'Première description' }
+                    - { property: 'secondDescription', label: 'Seconde description' }
+                    - { property: 'link', label: 'Lien' }
+            show:
+                title: '%%entity_label%% (#%%entity_id%%)'
+            search:
+                fields:
+                    - 'id'
+                    - { property: 'name', label: 'Nom de la compétence' }
+                    - { property: 'icon', label: 'Classe CSS de l''icône' }
+                    - { property: 'firstDescription', label: 'Première description' }
+                    - { property: 'secondDescription', label: 'Seconde description' }
+                    - { property: 'link', label: 'Lien' }
+        Contenu:
+            class: App\Entity\CmsContent
+            label: "Contenu (CMS)"
+            form:
+                fields:
+                    - { property: 'title', label: 'Titre' }
+                    - { property: 'text', label: 'Contenu', type: 'text_editor' }
+                    - { property: 'links', label: 'Liens' }
+                    - { property: 'image', label: 'Image', type: 'file_upload', type_options:{ upload_filename: '[name]_[uuid]_[contenthash].[extension]', download_path: 'files/' } }
+            list:
+                title: "Liste des contenus"
+                fields:
+                    - 'id'
+                    - { property: 'title', label: 'Titre du contenu' }
+                    - { property: 'image', label: 'Image', type: 'image' }
+            show:
+                title: '%%entity_label%% (#%%entity_id%%)'
+            search:
+                fields:
+                    - 'id'
+                    - { property: 'title', label: 'Titre du contenu' }
+                    - { property: 'image', label: 'Image', type: 'image' }
+
+    design:
+        brand_color: '#ffadad'
+        assets:
+            favicon: '/build/images/logoRK.jpeg'
+

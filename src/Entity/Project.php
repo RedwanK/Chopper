@@ -5,10 +5,12 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
+ * @ORM\Entity(repositoryClass="App\Repository\ProjectRepository")
  */
-class Product
+class Project
 {
+    const IMAGE_PATH_FIELDS = ['mainImage', 'secondImage', 'thirdImage'];
+
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
@@ -57,12 +59,12 @@ class Product
     private $url;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Column(type="array")
      */
     private $authors;
 
     /**
-     * @ORM\Column(type="dateinterval", nullable=true)
+     * @ORM\Column(type="date", nullable=true)
      */
     private $duration;
 
@@ -188,12 +190,12 @@ class Product
         return $this;
     }
 
-    public function getAuthors(): ?string
+    public function getAuthors(): ?array
     {
         return $this->authors;
     }
 
-    public function setAuthors(string $authors): self
+    public function setAuthors(?array $authors): self
     {
         $this->authors = $authors;
 
@@ -262,5 +264,39 @@ class Product
     public function setPrefered($prefered):void
     {
         $this->prefered = $prefered;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getMainImageName() {
+        return $this->getFilename($this->mainImage);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSecondImageName() {
+        return $this->getFilename($this->secondImage);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getThirdImageName() {
+        return $this->getFilename($this->thirdImage);
+    }
+
+    /**
+     * @param $path
+     *
+     * @return mixed
+     */
+    private function getFilename($path) {
+        $fileArray = explode('/', $path);
+
+        $fileArray = array_reverse($fileArray);
+
+        return $fileArray[0];
     }
 }
