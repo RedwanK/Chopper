@@ -97,6 +97,34 @@
         <source>app.home.about.title</source>
         <target>Un tout petit peu de moi</target>
       </trans-unit>
+      <trans-unit id="LS9K0aA" resname="app.global.connexion">
+        <source>app.global.connexion</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="cI4KmDK" resname="app.logged.in">
+        <source>app.logged.in</source>
+        <target>Connecté :</target>
+      </trans-unit>
+      <trans-unit id="cJWgEkZ" resname="app.global.logout">
+        <source>app.global.logout</source>
+        <target>Déconnexion</target>
+      </trans-unit>
+      <trans-unit id="deOqOSM" resname="app.global.login">
+        <source>app.global.login</source>
+        <target>Connexion</target>
+      </trans-unit>
+      <trans-unit id="iXpZFqC" resname="app.login.email">
+        <source>app.login.email</source>
+        <target>Identifiant</target>
+      </trans-unit>
+      <trans-unit id="6UIJD9o" resname="app.login.password">
+        <source>app.login.password</source>
+        <target>Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="aPbhnvn" resname="app.global.sign-in">
+        <source>app.global.sign-in</source>
+        <target>Valider</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
