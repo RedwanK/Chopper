@@ -6,6 +6,7 @@ use App\Repository\ActivitiesRepository;
 use App\Repository\ProjectRepository;
 use App\Repository\SkillsRepository;
 use App\Services\FilenameResolverService;
+use Doctrine\Common\Collections\ArrayCollection;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -28,12 +29,15 @@ class HomeController extends abstractController
      */
     private $filenameResolver;
 
+    private $projectFilters;
+
     public function __construct(ProjectRepository $projectRepository, ActivitiesRepository $activitiesRepository, SkillsRepository $skillsRepository, FilenameResolverService $filenameResolverService)
     {
         $this->projectRepo = $projectRepository;
         $this->activitiesRepo = $activitiesRepository;
         $this->skillsRepo = $skillsRepository;
         $this->filenameResolver = $filenameResolverService;
+        $this->projectFilters = [] ;
     }
 
     /**
@@ -42,11 +46,7 @@ class HomeController extends abstractController
     public function index() {
         $data = $this->getHomepageItems();
 
-        return $this->render("Home/index.html.twig", [
-            'projects' => $data['projects'],
-            'activities' => $data['activities'],
-            'skills' => $data['skills']
-        ]);
+        return $this->render("Home/index.html.twig", $data);
     }
 
     private function getHomepageItems() {
@@ -56,10 +56,25 @@ class HomeController extends abstractController
 
         $skills = $this->skillsRepo->findAll();
 
+        $projectFilters = $this->getProjectFilters($projects);
+
         return [
             'projects' => $projects,
             'activities' => $activities,
-            'skills' => $skills
+            'skills' => $skills,
+            'projectFilters' => $projectFilters
         ];
+    }
+
+    private function getProjectFilters($projects) {
+        foreach ($projects as $project) {
+            foreach ($project->getTechnologies() as $techno) {
+                if(!array_search($techno, $this->projectFilters, true)) {
+                    $this->projectFilters[] = $techno;
+                }
+            }
+        }
+
+        return $this->projectFilters;
     }
 }

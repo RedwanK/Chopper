@@ -2,26 +2,47 @@
     <!-- Portfolio -->
     <section class="content-section" id="portfolio">
         <div class="container">
-            <div class="content-section-heading text-center">
-                <h3 class="text-secondary mb-0">{{ 'app.home.portfolio.subtitle'|trans }}</h3>
-                <h2 class="mb-5">{{ 'app.home.portfolio.title'|trans }}</h2>
-            </div>
-            <div class="row no-gutters">
-                <!-- BLOCK PROJECT -->
-                {% for project in projects %}
-                <div class="col-lg-6">
-                    <a class="portfolio-item" href="#">
-                        <span class="caption">
-                            <span class="caption-content">
-                                {{ project.name }}
-                            </span>
-                        </span>
-                        <img class="img-fluid" src="{{ asset("uploads/files/"~project.getMainImageName()) }}" alt="{{ project.name }}">
-                    </a>
+
+            <h3 class="font-weight-bold text-center dark-grey-text pb-2">{{ 'app.home.portfolio.title'|trans }}</h3>
+            <hr class="w-header my-4">
+            <p class="lead text-center text-muted pt-2 mb-5">{{ 'app.home.portfolio.subtitle'|trans }}</p>
+
+            <!-- Grid row -->
+            <div class="row">
+
+                <!-- Grid column -->
+                <div class="col-md-12 dark-grey-text d-flex justify-content-center mb-5">
+                    <div class="row">
+                        <button type="button" class="btn btn-flat btn-xs m-0 px-3 py-1 filter" data-rel="all">Tous</button>
+                        {% for filter in projectFilters %}
+                            {% if loop.first %}<p class="font-weight-bold mb-0 px-1 py-1">/</p>{% endif %}
+                            <button type="button" class="btn btn-flat btn-xs m-0 px-1 py-1 filter" data-rel="{{ filter }}">{{ filter }}</button>
+                            {% if not loop.last %}<p class="font-weight-bold mb-0 px-1 py-1">/</p>{% endif %}
+                        {% endfor %}
+                    </div>
+
                 </div>
-                {% endfor %}
-                <!-- BLOCK PROJECT -->
+                <!-- Grid column -->
             </div>
+            <!-- Grid row -->
+
+            <!-- Grid row -->
+            <div class="gallery mb-5" id="gallery">
+                {% for project in projects %}
+                    {% set filters = project.technologies|join(' ') %}
+                    <div class="mb-3 pics all {{ filters }} animation">
+                        <a data-toggle="modal" data-target="#project-content-{{ project.id }}" class="portfolio-item">
+                            <span class="caption">
+                                <span class="caption-content">
+                                    {{ project.name }}
+                                </span>
+                            </span>
+                            <img class="img-fluid z-depth-1 rounded" src="{{ asset("uploads/files/"~project.getMainImageName()) }}" alt="{{ project.name }}">
+                        </a>
+                    </div>
+                {% endfor %}
+            </div>
+            <!-- Grid row -->
         </div>
     </section>
 {% endblock %}
