@@ -125,6 +125,12 @@ easy_admin:
                     - 'id'
                     - { property: 'title', label: 'Titre du contenu' }
                     - { property: 'image', label: 'Image', type: 'image' }
+        User:
+            class: App\Entity\User
+        Exercise:
+            class: App\Entity\Exercise
+        Program:
+            class: App\Entity\Program
 
     design:
         brand_color: '#ffadad'
