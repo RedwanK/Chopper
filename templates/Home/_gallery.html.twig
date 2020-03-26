@@ -1,0 +1,29 @@
+{% block home_callout %}
+    <section class="callout py-5 d-none d-md-block" id="gallery">
+        <div class="container text-center">
+            <h2 class="mx-auto mb-5">{{ 'app.home.callout.title'|trans }}</h2>
+            <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    {% for activity in activities %}
+                    <li data-target="#galleryCarousel" data-slide-to="{{ loop.index - 1 }}" class="{% if loop.first %}active{% endif %}"></li>
+                    {% endfor %}
+                </ol>
+                <div class="carousel-inner">
+                    {% for activity in activities %}
+                        <div class="carousel-item {% if loop.first %}active{% endif %}">
+                            <img class="d-block w-100 img-fluid" src="{{ asset("uploads/files/"~activity.getImageName()) }}" alt="{{ activity.name }}">
+                        </div>
+                    {% endfor %}
+                </div>
+                <a class="carousel-control-prev" href="#galleryCarousel" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">{{ 'app.global.next' }}</span>
+                </a>
+                <a class="carousel-control-next" href="#galleryCarousel" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">{{ 'app.global.previous'|trans }}</span>
+                </a>
+            </div>
+        </div>
+    </section>
+{% endblock %}
