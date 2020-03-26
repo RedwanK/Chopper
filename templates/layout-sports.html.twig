@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="fr">
+    {% include "_header.html.twig" %}
+    {% block header %}{% endblock %}
+
+    <body id="page-top">
+        {% block navigation %}{% endblock %}
+        {% include "_sports-menu.html.twig" %}
+        <div class="container pt-5">
+            {% block content %}{% endblock %}
+        </div>
+        {% include "_footer.html.twig" %}
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
+

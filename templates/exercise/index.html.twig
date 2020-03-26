@@ -1,0 +1,45 @@
+{% extends 'layout-sports.html.twig' %}
+
+{% block title %}{{ 'app.global.index_exercise'|trans }}{% endblock %}
+
+{% block content %}
+    <h1 class="mb-5">{{ 'app.global.index_exercise'|trans }}</h1>
+
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Duration</th>
+                <th>Repetition</th>
+                <th>Type</th>
+                <th>Zone</th>
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for exercise in exercises %}
+                <tr>
+                    <td>{{ exercise.name }}</td>
+                    <td>{{ exercise.description }}</td>
+                    <td>{{ exercise.duration }}</td>
+                    <td>{{ exercise.repetition }}</td>
+                    <td>{{ exercise.type }}</td>
+                    <td>{{ exercise.zone }}</td>
+                    <td>
+                        <a href="{{ path('exercise_show', {'id': exercise.id}) }}">show</a>
+                        <a href="{{ path('exercise_edit', {'id': exercise.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="8">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <a href="{{ path('exercise_new') }}">Create new</a>
+{% endblock %}

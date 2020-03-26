@@ -1,11 +1,10 @@
 {% block home_callout %}
-    <section class="callout py-5 d-none d-md-block" id="gallery">
+    <section class="gallery parallax py-5 d-none d-md-block" id="gallery">
         <div class="container text-center">
-            <h2 class="mx-auto mb-5">{{ 'app.home.callout.title'|trans }}</h2>
             <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     {% for activity in activities %}
-                    <li data-target="#galleryCarousel" data-slide-to="{{ loop.index - 1 }}" class="{% if loop.first %}active{% endif %}"></li>
+                        <li data-target="#galleryCarousel" data-slide-to="{{ loop.index - 1 }}" class="{% if loop.first %}active{% endif %}"></li>
                     {% endfor %}
                 </ol>
                 <div class="carousel-inner">
