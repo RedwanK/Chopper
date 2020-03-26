@@ -87,7 +87,7 @@
       </trans-unit>
       <trans-unit id="9.fSnNZ" resname="app.home.callout.button">
         <source>app.home.callout.button</source>
-        <target>Ma galerie photo</target>
+        <target>Mes centres d'intérêts</target>
       </trans-unit>
       <trans-unit id="8cl21ri" resname="app.home.call_to_action.title">
         <source>app.home.call_to_action.title</source>
@@ -124,6 +124,26 @@
       <trans-unit id="aPbhnvn" resname="app.global.sign-in">
         <source>app.global.sign-in</source>
         <target>Valider</target>
+      </trans-unit>
+      <trans-unit id="sFscJ98" resname="app.project.client">
+        <source>app.project.client</source>
+        <target>Client</target>
+      </trans-unit>
+      <trans-unit id="wdGVS2." resname="app.project.technologies">
+        <source>app.project.technologies</source>
+        <target>Technologies</target>
+      </trans-unit>
+      <trans-unit id="QCJEssi" resname="app.project.authors">
+        <source>app.project.authors</source>
+        <target>Auteurs</target>
+      </trans-unit>
+      <trans-unit id="iDkJ6oA" resname="app.project.github_link">
+        <source>app.project.github_link</source>
+        <target>Github</target>
+      </trans-unit>
+      <trans-unit id="o.gY5n2" resname="app.project.link">
+        <source>app.project.link</source>
+        <target>Lien</target>
       </trans-unit>
     </body>
   </file>

@@ -1,0 +1,85 @@
+{% block home_modal_projects %}
+    {% for project in projects %}
+    <!-- Modal -->
+    <div class="modal fade" id="project-content-{{ project.id }}" tabindex="-1" role="dialog" aria-labelledby="modal-title{{ project.name }}" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body p-0">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                    <!-- Grid row -->
+                    <div class="row">
+
+                        <!-- Grid column -->
+                        <div class="col-md-6 py-5 pl-5">
+
+                            <h5 class="font-weight-normal mb-3">{{ project.name }}</h5>
+
+                            {% if project.shortDescription is not null %}
+                            <div class="text-muted">{{ project.shortDescription|raw }}</div>
+                            {% endif %}
+
+                            <ul class="list-unstyled font-small mt-5">
+                                {% if project.client is not null %}
+                                <li>
+                                    <p class="text-uppercase mb-2"><strong>{{ 'app.project.client'|trans }}</strong></p>
+                                    <p class="text-muted mb-4">{{ project.client }}</p>
+                                </li>
+                                {% endif %}
+
+                                {% if project.technologies is not null and project.technologies is not empty %}
+                                <li>
+                                    <p class="text-uppercase mb-2"><strong>{{ 'app.project.technologies'|trans }}</strong></p>
+                                    <p class="text-muted mb-4">{{ project.technologies|join(', ') }}</p>
+                                </li>
+                                {% endif %}
+
+                                {% if project.githubLink is not null %}
+                                <li>
+                                    <p class="text-uppercase mb-2"><strong>{{ 'app.project.github_link'|trans }}</strong></p>
+                                    <a href="{{ project.githubLink }}">{{ project.name }}</a>
+                                </li>
+                                {% endif %}
+
+                                {% if project.url is not null %}
+                                <li>
+                                    <p class="text-uppercase mb-2"><strong>{{ 'app.project.link'|trans }}</strong></p>
+                                    <a href="{{ project.url }}">{{ project.name }}</a>
+                                </li>
+                                {% endif %}
+
+                                <li>
+                                    <p class="text-uppercase mb-2"><strong>{{ 'app.project.authors'|trans }}</strong></p>
+                                    <p class="text-muted mb-4">{{ project.authors|join(', ') }}</p>
+                                </li>
+                            </ul>
+
+                        </div>
+                        <!-- Grid column -->
+
+                        <!-- Grid column -->
+                        <div class="col-md-6 d-flex align-items-center">
+
+
+                            <div class="view rounded-right">
+                                {% if project.secondImage is not null %}
+                                    <img class="img-fluid" src="{{ asset("uploads/files/"~project.getSecondImageName()) }}" alt="Image descriptive du projet {{ project.name }}">
+                                {% else %}
+                                    <img class="img-fluid" src="{{ asset("uploads/files/"~project.getMainImageName()) }}" alt="Image descriptive du projet {{ project.name }}">
+                                {% endif %}
+                            </div>
+
+                        </div>
+                        <!-- Grid column -->
+
+                    </div>
+                    <!-- Grid row -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

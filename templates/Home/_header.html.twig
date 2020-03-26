@@ -2,11 +2,19 @@
     <!-- Header -->
     <header class="masthead d-flex">
         <div class="container text-center my-auto">
-            <h1 class="mb-1">{{ 'app.home.header.title'|trans }}</h1>
-            <h3 class="mb-5">
+            <img class="img-fluid" src="{{ asset("build/images/logoRK.jpeg") }}" alt="Logo de Redwan Kara">
+            <span class="my-3"></span>
+            <span class="d-none d-md-block">
+                <a href="#" class="typewrite h1" data-period="2000" data-type='[ "{{ 'app.home.header.title'|trans }}" ]'>
+                    &nbsp;<span class="wrap"></span>
+                </a>
+            </span>
+            <hr>
+            <h1 class="h3 mb-5">
                 <em>{{ 'app.home.header.subtitle'|trans }}</em>
-            </h3>
-            <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">{{ 'app.home.header.about_button'|trans }}</a>
+            </h1>
+            <br>
+            <a class="header-arrow js-scroll-trigger" href="#about"><i class="icon-arrow-down"></i> </a>
         </div>
         <div class="overlay"></div>
     </header>

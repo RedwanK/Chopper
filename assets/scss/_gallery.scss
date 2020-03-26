@@ -1,0 +1,37 @@
+// Callout
+.gallery {
+  display: block;
+  .carousel-item {
+    height: 70vh;
+    &.active {
+      padding-top: auto;
+    }
+    img {
+      position: absolute;
+      height: 100% !important;
+      width: 100% !important;
+    }
+
+  }
+
+  h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    display: block;
+  }
+
+  &.parallax {
+    /* The image used */
+    background-image: url('../images/parallaxbg2.jpg');
+
+    /* Set a specific height */
+    height: auto;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+}
