@@ -145,6 +145,82 @@
         <source>app.project.link</source>
         <target>Lien</target>
       </trans-unit>
+      <trans-unit id="NYKGSV9" resname="app.global.training">
+        <source>app.global.training</source>
+        <target>Entraînement</target>
+      </trans-unit>
+      <trans-unit id="zisteEo" resname="app.global.programs">
+        <source>app.global.programs</source>
+        <target>Programme</target>
+      </trans-unit>
+      <trans-unit id="ATavLZz" resname="app.global.exercises">
+        <source>app.global.exercises</source>
+        <target>Exercices</target>
+      </trans-unit>
+      <trans-unit id="JNpyd_T" resname="app.global.new_exercise">
+        <source>app.global.new_exercise</source>
+        <target>Nouvel exercice</target>
+      </trans-unit>
+      <trans-unit id="XcET8jF" resname="app.global.edit_exercise">
+        <source>app.global.edit_exercise</source>
+        <target>Editer l'exercice</target>
+      </trans-unit>
+      <trans-unit id="YgkgqSQ" resname="app.global.index_exercise">
+        <source>app.global.index_exercise</source>
+        <target>Exercices</target>
+      </trans-unit>
+      <trans-unit id="Md8Axc6" resname="app.global.exercise">
+        <source>app.global.exercise</source>
+        <target>Exercice</target>
+      </trans-unit>
+      <trans-unit id="g0Q_Qo7" resname="app.global.gallery">
+        <source>app.global.gallery</source>
+        <target>Gallerie</target>
+      </trans-unit>
+      <trans-unit id="i2039_m" resname="app.global.previous">
+        <source>app.global.previous</source>
+        <target>Précédent</target>
+      </trans-unit>
+      <trans-unit id="_DlSEtb" resname="app.contact.dev">
+        <source>app.contact.dev</source>
+        <target>Développeur d'applications</target>
+      </trans-unit>
+      <trans-unit id="jcv7rEV" resname="app.contact.zone">
+        <source>app.contact.zone</source>
+        <target>Dans toute la région lyonnaise</target>
+      </trans-unit>
+      <trans-unit id="AFkmvVT" resname="app.contact.email">
+        <source>app.contact.email</source>
+        <target>Email :</target>
+      </trans-unit>
+      <trans-unit id="giREF.l" resname="email">
+        <source>email</source>
+        <target>contact@redwan.dev</target>
+      </trans-unit>
+      <trans-unit id="YlEPiRu" resname="app.global.contact_us">
+        <source>app.global.contact_us</source>
+        <target>Me contacter</target>
+      </trans-unit>
+      <trans-unit id="ZOjSQOz" resname="app.global.name">
+        <source>app.global.name</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="69zaRWy" resname="app.global.email">
+        <source>app.global.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="RvgC334" resname="app.global.phone">
+        <source>app.global.phone</source>
+        <target>Téléphone (facultatif)</target>
+      </trans-unit>
+      <trans-unit id="0h6W25H" resname="app.global.company">
+        <source>app.global.company</source>
+        <target>Entreprise (facultatif)</target>
+      </trans-unit>
+      <trans-unit id="Z4wEVYr" resname="app.global.message">
+        <source>app.global.message</source>
+        <target>Message</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>

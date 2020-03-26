@@ -1,10 +1,84 @@
 {% block home_map %}
-    {#<!-- Map -->
+    <!-- Map -->
     <section id="contact" class="map">
-        <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A&amp;output=embed"></iframe>
-        <br/>
-        <small>
-            <a href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;aq=0&amp;oq=twitter&amp;sll=28.659344,-81.187888&amp;sspn=0.128789,0.264187&amp;ie=UTF8&amp;hq=Twitter,+Inc.,+Market+Street,+San+Francisco,+CA&amp;t=m&amp;z=15&amp;iwloc=A"></a>
-        </small>
-    </section>#}
+        <div class="container-fluid mt-3 mb-5">
+            <div class="card">
+                <div class="row">
+                    <div class="col-md-6">
+                        <!-- Google Maps -->
+                        <div id="map-within-card-2" class="map-container rounded-left" style="height: 400px">
+                            <iframe src="https://maps.google.com/maps?q=Lyon&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                                    style="border:0" allowfullscreen></iframe>
+                        </div>
+                        <!-- Google Maps -->
+                    </div>
+                    <div class="col-10 col-md-4 mx-auto align-self-center py-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <img class="img-fluid" src="{{ asset("build/images/logoRK.jpeg") }}" alt="Logo de Redwan Kara">
+                            </div>
+                            <div class="col-md-6 d-flex flex-column justify-content-center">
+                                <h6 class="font-weight-bold grey-text text-uppercase small">{{ 'app.contact.dev'|trans }}</h6>
+                                <h5 class="font-weight-normal mb-4">{{ 'author'|trans }}</h5>
+                                <p class="text-muted font-weight-light">{{ 'app.contact.zone'|trans }}</p>
+                                <p class="text-muted font-weight-light mb-0">{{ 'app.contact.email'|trans }} {{ 'email'|trans }}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-section">
+        <div class="container">
+            <div class="card">
+                <form action="{{ path('contact_request') }}" method="post">
+                    <div class="card-body form">
+                        <h3 class="font-weight-bold dark-grey-text mt-4"><i class="icon-envelope pr-2 mr-1"></i>{{ 'app.global.contact_us'|trans }}</h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input name="name" type="text" id="form-contact-name" class="form-control" required>
+                                    <label for="form-contact-name" class="">{{ 'app.global.name'|trans }}</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input name="email" type="text" id="form-contact-email" class="form-control" required>
+                                    <label for="form-contact-email" class="">{{ 'app.global.email'|trans }}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input name="phone" type="text" id="form-contact-phone" class="form-control">
+                                    <label for="form-contact-phone" class="">{{ 'app.global.phone'|trans }}</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="md-form mb-0">
+                                    <input name="company" type="text" id="form-contact-company" class="form-control">
+                                    <label for="form-contact-company" class="">{{ 'app.global.company'|trans }}</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="md-form mb-0">
+                                    <textarea name="message" id="form-contact-message" class="form-control md-textarea" rows="3" required></textarea>
+                                    <label for="form-contact-message">{{ 'app.global.message'|trans }}</label>
+                                    <hr>
+                                    <button class="btn btn-flat btn-lg float-right" type="submit">
+                                        <i class="icon-paper-plane"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 {% endblock %}
