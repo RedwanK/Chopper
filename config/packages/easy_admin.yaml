@@ -81,8 +81,8 @@ easy_admin:
                 fields:
                     - { property: 'name', label: 'Nom de la compétence' }
                     - { property: 'icon', label: 'Classe CSS de l''icône' }
-                    - { property: 'firstDescription', label: 'Première description', type: 'text_editor' }
-                    - { property: 'secondDescription', label: 'Seconde description', type: 'text_editor' }
+                    - { property: 'firstDescription', label: 'Première description', type: 'text' }
+                    - { property: 'secondDescription', label: 'Seconde description', type: 'text' }
                     - { property: 'link', label: 'Lien' }
             list:
                 title: "Liste des compétences"

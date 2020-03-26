@@ -3,7 +3,7 @@
     <section class="content-section bg-primary text-white text-center" id="services">
         <div class="container">
             <div class="content-section-heading">
-                <h3 class="text-secondary mb-0">{{ 'app.home.services.subtitle'|trans }}</h3>
+                <span class="h3 text-secondary mb-0">{{ 'app.home.services.subtitle'|trans }}</span>
                 <h2 class="mb-5">{{ 'app.home.services.title'|trans }}</h2>
             </div>
             <div class="row">
@@ -12,12 +12,13 @@
                     <span class="service-icon rounded-circle mx-auto mb-3">
                       <i class="{{ skill.icon }}"></i>
                     </span>
-                    <h4>
+                    <span class="h4 mb-5">
                         <strong>{{ skill.name }}</strong>
-                    </h4>
-                    {{ skill.firstDescription|raw }}
+                    </span>
+                    <hr>
+                        <p class="text-justify">{{ skill.firstDescription }}</p>
                     <br/>
-                    <div class="text-faded mb-0">{{ skill.secondDescription|raw }}</div>
+                    <div class="text-faded mb-0"><p class="text-justify">{{ skill.secondDescription }}</p></div>
                     {% if skill.link is defined and skill.link is not null %}
                         <a href="{{ skill.link }}" title="{{ skill.name }}">
                             <i class="icon-plus"></i>

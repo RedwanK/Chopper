@@ -47,7 +47,7 @@
       </trans-unit>
       <trans-unit id="v33ZW5y" resname="app.home.about.paragraph">
         <source>app.home.about.paragraph</source>
-        <target>De formation supérieure en informatique, j'ai obtenu un DUT Informatique en 2019. En parallèle de mes études j'ai créé ma micro-entreprise de développement et conception de solutions prêtes à l'emploi. Actuellement en école d'Ingénieur en alternance, je me spécialise dans le développement web et mobile sur mesure. Et voici l'entreprise dans laquelle j'évolue :</target>
+        <target>De formation supérieure en informatique, je propose un service de conception, développement et maintiens de systèmes informatiques sur mesures. J'analyse vos besoin et vous propose une solution technique optimale a moindre coût. De la réalisation de shootings photos au déploiement sur internet en passant par une stratégie de référencement solide, je saurais vous accompagner afin que votre expérience soit optimale. Disponible dans toute la région lyonnaise et ses alentours, n'hésitez pas a me contacter pour un éventuel devis gratuit. Afin de vous proposer un service complet, mon réseau professionnel me permet de proposer des prestations telles que l'établissement de chartes graphiques, shootings photos, logos... Ces services sont compris dans les devis que je peux vous proposer.</target>
       </trans-unit>
       <trans-unit id="qVmtKev" resname="app.home.call_to_action.first_button">
         <source>app.home.call_to_action.first_button</source>
@@ -63,11 +63,11 @@
       </trans-unit>
       <trans-unit id="PCiqNgb" resname="app.home.portfolio.subtitle">
         <source>app.home.portfolio.subtitle</source>
-        <target>Quelques unes de mes réalisations. **(voir conditions, page 534 alinéa 8 de mes CGU)</target>
+        <target>Ces projets sont développés conformément aux normes et standards du web.</target>
       </trans-unit>
       <trans-unit id="yW19b9N" resname="app.home.portfolio.title">
         <source>app.home.portfolio.title</source>
-        <target>Satisfait ou remboursé**</target>
+        <target>Quelques exemples de réalisations</target>
       </trans-unit>
       <trans-unit id="1uBblAD" resname="app.home.about.link">
         <source>app.home.about.link</source>
@@ -79,11 +79,11 @@
       </trans-unit>
       <trans-unit id="HTNgfnN" resname="app.home.services.subtitle">
         <source>app.home.services.subtitle</source>
-        <target>Le backend je préfère, mon frontend je m'éforce de perfectionner.</target>
+        <target></target>
       </trans-unit>
       <trans-unit id="8ibT1P2" resname="app.home.services.title">
         <source>app.home.services.title</source>
-        <target>Plus ou moins ce que je sais faire :</target>
+        <target>Mes compétences</target>
       </trans-unit>
       <trans-unit id="9.fSnNZ" resname="app.home.callout.button">
         <source>app.home.callout.button</source>
@@ -95,7 +95,7 @@
       </trans-unit>
       <trans-unit id="wy.pen3" resname="app.home.about.title">
         <source>app.home.about.title</source>
-        <target>Un tout petit peu de moi</target>
+        <target>Réalisations d'applications ou sites internet sur mesure.</target>
       </trans-unit>
       <trans-unit id="LS9K0aA" resname="app.global.connexion">
         <source>app.global.connexion</source>
@@ -175,7 +175,7 @@
       </trans-unit>
       <trans-unit id="g0Q_Qo7" resname="app.global.gallery">
         <source>app.global.gallery</source>
-        <target>Gallerie</target>
+        <target>Galerie</target>
       </trans-unit>
       <trans-unit id="i2039_m" resname="app.global.previous">
         <source>app.global.previous</source>
