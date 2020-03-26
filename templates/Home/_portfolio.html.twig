@@ -13,10 +13,10 @@
                 <!-- Grid column -->
                 <div class="col-md-12 dark-grey-text d-flex justify-content-center mb-5">
                     <div class="row">
-                        <button type="button" class="btn btn-flat btn-xs m-0 px-3 py-1 text-white filter" data-rel="all">Tous</button>
+                        <button type="button" class="btn btn-flat btn-xs m-0 px-3 py-1 filter" data-rel="all">Tous</button>
                         {% for filter in projectFilters %}
                             {% if loop.first %}<p class="font-weight-bold mb-0 px-1 py-1">/</p>{% endif %}
-                            <button type="button" class="btn btn-flat btn-xs m-0 px-1 py-1 text-white filter" data-rel="{{ filter }}">{{ filter }}</button>
+                            <button type="button" class="btn btn-flat btn-xs m-0 px-1 py-1 filter" data-rel="{{ filter }}">{{ filter }}</button>
                             {% if not loop.last %}<p class="font-weight-bold mb-0 px-1 py-1">/</p>{% endif %}
                         {% endfor %}
                     </div>
