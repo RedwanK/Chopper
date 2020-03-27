@@ -1,6 +1,9 @@
 {% block home_callout %}
     <section class="gallery parallax py-5 d-none d-md-block" id="gallery">
         <div class="container text-center">
+            <div class="content-section-heading mb-3">
+                <span class="h2">{{ 'app.home.gallery.title'|trans }}</span>
+            </div>
             <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     {% for activity in activities %}
@@ -14,11 +17,11 @@
                         </div>
                     {% endfor %}
                 </div>
-                <a class="carousel-control-prev" href="#galleryCarousel" role="button" data-slide="prev">
+                <a class="carousel-control-prev" href="#galleryCarousel" role="button" data-slide="prev" title="Photo précédente">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="sr-only">{{ 'app.global.next' }}</span>
                 </a>
-                <a class="carousel-control-next" href="#galleryCarousel" role="button" data-slide="next">
+                <a class="carousel-control-next" href="#galleryCarousel" role="button" data-slide="next" title="Photo suivante">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="sr-only">{{ 'app.global.previous'|trans }}</span>
                 </a>
