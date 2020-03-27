@@ -1,6 +1,6 @@
 {% block home_map %}
     <!-- Map -->
-    <section id="contact" class="map">
+    <section id="contact" class="">
         <div class="container-fluid mt-3 mb-5">
             <div class="card">
                 <div class="row">
@@ -15,13 +15,14 @@
                     <div class="col-10 col-md-4 mx-auto align-self-center py-4">
                         <div class="row">
                             <div class="col-md-6">
-                                <img class="img-fluid" src="{{ asset("build/images/logoRK.jpeg") }}" alt="Logo de Redwan Kara">
+                                <img class="img-fluid" src="{{ asset("build/images/logoRK.jpeg") }}" alt="Logo de {{ 'author'|trans }}">
                             </div>
                             <div class="col-md-6 d-flex flex-column justify-content-center">
                                 <h6 class="font-weight-bold grey-text text-uppercase small">{{ 'app.contact.dev'|trans }}</h6>
                                 <h5 class="font-weight-normal mb-4">{{ 'author'|trans }}</h5>
                                 <p class="text-muted font-weight-light">{{ 'app.contact.zone'|trans }}</p>
                                 <p class="text-muted font-weight-light mb-0">{{ 'app.contact.email'|trans }} {{ 'email'|trans }}</p>
+                                <p class="text-muted font-weight-light mb-0">{{ 'app.global.siret'|trans }}</p>
                             </div>
                         </div>
 
@@ -29,13 +30,11 @@
                 </div>
             </div>
         </div>
-    </section>
-    <section class="content-section">
         <div class="container">
             <div class="card">
                 <form action="{{ path('contact_request') }}" method="post">
                     <div class="card-body form">
-                        <h3 class="font-weight-bold dark-grey-text mt-4"><i class="icon-envelope pr-2 mr-1"></i>{{ 'app.global.contact_us'|trans }}</h3>
+                        <h2 class="font-weight-bold dark-grey-text mt-4"><i class="icon-envelope pr-2 mr-1"></i>{{ 'app.global.contact_us'|trans }}</h2>
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="md-form mb-2">

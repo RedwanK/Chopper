@@ -39,7 +39,7 @@
       </trans-unit>
       <trans-unit id="cJG9kmO" resname="app.home.header.subtitle">
         <source>app.home.header.subtitle</source>
-        <target>Conception de solutions pour les problématiques métiers les plus sécifiques.</target>
+        <target>Conception de solutions adaptées à vos besoins techniques et économiques.</target>
       </trans-unit>
       <trans-unit id="nuGqVOs" resname="app.home.header.about_button">
         <source>app.home.header.about_button</source>
@@ -77,13 +77,13 @@
         <source>app.home.about.services_button</source>
         <target>Voir mes compétences</target>
       </trans-unit>
-      <trans-unit id="HTNgfnN" resname="app.home.services.subtitle">
-        <source>app.home.services.subtitle</source>
-        <target></target>
+      <trans-unit id="ufjo5lP" resname="app.home.gallery.title">
+        <source>app.home.gallery.title</source>
+        <target>Un peu plus sur moi : ma galerie photo.</target>
       </trans-unit>
       <trans-unit id="8ibT1P2" resname="app.home.services.title">
         <source>app.home.services.title</source>
-        <target>Mes compétences</target>
+        <target>Je vous accompagne dans le développement de votre entreprise sur internet.</target>
       </trans-unit>
       <trans-unit id="9.fSnNZ" resname="app.home.callout.button">
         <source>app.home.callout.button</source>
@@ -95,7 +95,7 @@
       </trans-unit>
       <trans-unit id="wy.pen3" resname="app.home.about.title">
         <source>app.home.about.title</source>
-        <target>Réalisations d'applications ou sites internet sur mesure.</target>
+        <target>Ce que je propose : la création de sites internet adaptés à vos besoin.</target>
       </trans-unit>
       <trans-unit id="LS9K0aA" resname="app.global.connexion">
         <source>app.global.connexion</source>
@@ -220,6 +220,30 @@
       <trans-unit id="Z4wEVYr" resname="app.global.message">
         <source>app.global.message</source>
         <target>Message</target>
+      </trans-unit>
+      <trans-unit id="mezJsUV" resname="app.global.siret">
+        <source>app.global.siret</source>
+        <target>SIRET : 849 852 470 00012</target>
+      </trans-unit>
+      <trans-unit id="nosT8vu" resname="app.meta.description">
+        <source>app.meta.description</source>
+        <target>Développement de sites internet sur mesure à moindre coût et adapté à votre besoin. Vous trouverez le détail de ce que je propose et de mes compétences. N'histez pas à me contacter pour un devis gratuit.</target>
+      </trans-unit>
+      <trans-unit id="15cHOK6" resname="app.meta.title">
+        <source>app.meta.title</source>
+        <target>Création web sur mesure.</target>
+      </trans-unit>
+      <trans-unit id="h9kwhfR" resname="app.meta.keywords">
+        <source>app.meta.keywords</source>
+        <target>Développement web, devis gratuit, sur-mesure, site internet personnalisé.</target>
+      </trans-unit>
+      <trans-unit id="XvfqXmb" resname="app.meta.og_title">
+        <source>app.meta.og_title</source>
+        <target>Redwan Kara, développeur web.</target>
+      </trans-unit>
+      <trans-unit id="rg75W5c" resname="app.meta.og_description">
+        <source>app.meta.og_description</source>
+        <target>Développement de sites internet sur mesure et à moindre coût. N'hésitez pas à me contacter pour un devis gratuit.</target>
       </trans-unit>
     </body>
   </file>

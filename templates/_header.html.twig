@@ -2,15 +2,60 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
+    <meta name="description" content="{{ 'app.meta.description'|trans }}">
     <meta name="author" content="{{ 'author'|trans }}">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="{{ 'app.meta.keywords'|trans }}">
+    <meta property="og:title" content="{% block ogtitle %}{{ 'app.meta.og_title'|trans }}{% endblock %}" />
+    <meta property="og:type" content="{% block ogtype %}website{% endblock %}" />
+    <meta property="og:url" content="{{ app.request.uri }}" />
+    <meta property="og:description" content="{{ 'app.meta.og_description'|trans }}" />
+    <meta property="og:image" content="{% block ogimage %}{{ app.request.getSchemeAndHttpHost() }}{{ asset("build/images/logoRK.jpeg") }}{% endblock %}" />
+    <meta property="og:locale" content="{{ app.request.locale }}" />
+    <meta property="og:site_name" content="Redwan Kara" />
+    <link rel="icon" type="image/png" href="{{ asset("build/images/logoRK.jpeg") }}">
+    <meta name="theme-color" content="#ffffff">
 
-    <title>{{ 'author'|trans }}</title>
+    <title>{{ 'app.meta.title'|trans }}</title>
 
     <link href="{{ asset("build/woff.css") }}" rel="stylesheet">
     <link href="{{ asset("build/woff2.css") }}" rel="stylesheet">
     {{ encore_entry_link_tags('app') }}
+
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "Organization",
+            "url": "https://www.redwan.dev",
+            "logo": "{{ app.request.getSchemeAndHttpHost() ~ '/build/images/logoRK.jpeg' }}",
+            "name": "Redwan Kara",
+            "legalName": "Redwan Kara",
+            "foundingDate": "2019",
+             "founders":[
+             {
+             "@type": "Person",
+             "name": "Redwan Kara"
+             }],
+            "contactPoint": [{
+                "@type": "ContactPoint",
+                "contactType": "customer service",
+                "email": "contact@redwan.dev"
+              }],
+              "sameAs": [
+                "https://www.linkedin.com/in/redwan-kara-8014a2183/"
+              ]
+        }
+    </script>
+    <script type="application/ld+json">
+        {
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "Redwan Kara",
+            "url": "https://www.redwan.dev"
+        }
+    </script>
 
 </head>
 {% endblock %}

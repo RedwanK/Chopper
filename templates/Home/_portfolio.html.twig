@@ -31,13 +31,13 @@
                 {% for project in projects %}
                     {% set filters = project.technologies|join(' ') %}
                     <div class="mb-3 pics all {{ filters }} animation">
-                        <a data-toggle="modal" data-target="#project-content-{{ project.id }}" class="portfolio-item">
+                        <a data-toggle="modal" data-target="#project-content-{{ project.id }}" class="portfolio-item" title="Voir le détail du projet {{ project.name }}">
                             <span class="caption">
                                 <span class="caption-content">
                                     {{ project.name }}
                                 </span>
                             </span>
-                            <img class="img-fluid z-depth-1 rounded" src="{{ asset("uploads/files/"~project.getMainImageName()) }}" alt="{{ project.name }}">
+                            <img class="img-fluid z-depth-1 rounded" src="{{ asset("uploads/files/"~project.getMainImageName()) }}" alt="Illustration du projet {{ project.name }}">
                         </a>
                     </div>
                 {% endfor %}
