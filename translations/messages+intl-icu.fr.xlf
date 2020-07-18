@@ -249,6 +249,10 @@
         <source>app.home.tweets.title</source>
         <target>Mes derniers tweets</target>
       </trans-unit>
+      <trans-unit id="qFw557q" resname="app.global.tweets">
+        <source>app.global.tweets</source>
+        <target>Tweets</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
