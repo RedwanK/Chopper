@@ -21,7 +21,7 @@
         "copy-webpack-plugin": "^5.1.1",
         "font-awesome": "^4.7.0",
         "google-fonts-plugin": "^5.0.2",
-        "jquery": "^3.4.1",
+        "jquery": "^3.5.0",
         "jquery-easing": "^0.0.1",
         "minimist": "1.2.3",
         "popper.js": "^1.16.1",
