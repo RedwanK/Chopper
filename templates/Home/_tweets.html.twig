@@ -1,0 +1,60 @@
+{% block home_tweets %}
+    <!-- Tweets -->
+    <section class="content-section text-center parallax bg-light" id="tweets">
+        <div class="container-fluid">
+            <div class="content-section-heading">
+                <h2 class="mb-5">{{ 'app.home.tweets.title'|trans }}
+                    <a class="social-link rounded-circle text-primary mr-3" href="https://twitter.com/kara_redwan" target="_blank" title="Lien vers la page Twitter de {{ 'author'|trans }}">
+                        <i class="icon-social-twitter"></i>
+                    </a>
+                </h2>
+            </div>
+            <div class="row">
+                <div class="glide">
+                    <div class="glide__track" data-glide-el="track">
+                        <ul class="glide__slides">
+                            {% for tweet in tweets %}
+                                {% if not tweet.retweeted and tweet.in_reply_to_status_id is null and (tweet.entities is defined and tweet.entities.media is defined and tweet.entities.media[0] is defined)%}
+                                <li class="glide__slide">
+                                    <div class="tweet-wrap d-flex flex-column justify-content-between">
+                                        <div class="tweet-header">
+                                            <img src="{{ tweet.user.profile_image_url_https }}" alt="image de profil tweeter de {{ tweet.user.name }}" class="avator">
+                                            <div class="tweet-header-info">
+                                                {{ tweet.user.name }} <span>@{{ tweet.user.screen_name }}</span>
+                                                <p>{{ tweet.full_text|twitterDescription }}</p>
+                                                {% if tweet.entities.hashtags is defined and tweet.entities.hashtags is not empty or tweet.entities.hashtags is not null %}
+                                                    <p class="text-primary">{% for hashtag in tweet.entities.hashtags %}#{{ hashtag.text }} {% endfor %}</p>
+                                                {% endif %}
+                                                {% if tweet.entities.urls is defined and tweet.entities.urls is not empty or tweet.entities.urls is not null %}
+                                                    <p class="text-primary">{% for url in tweet.entities.urls %}<a href="{{ url.expanded_url }}" title="lien externe vers {{ url.display_url }}"></a>{{ url.display_url }} {% endfor %}</p>
+                                                {% endif %}
+                                            </div>
+
+                                        </div>
+                                        <div class="tweet-img-wrap">
+                                            <img src="{{ tweet.entities.media[0].media_url_https }}" alt="" class="tweet-img">
+                                        </div>
+                                        <div class="tweet-info-counts">
+                                            <div class="retweets">
+                                                <svg class="feather feather-repeat sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="17 1 21 5 17 9"></polyline><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><polyline points="7 23 3 19 7 15"></polyline><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg>
+                                                <div class="retweet-count">{{ tweet.retweet_count }}</div>
+                                            </div>
+
+                                            <div class="likes">
+                                                <svg class="feather feather-heart sc-dnqmqq jxshSx" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                                                <div class="likes-count">
+                                                    {{ tweet.favorite_count }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

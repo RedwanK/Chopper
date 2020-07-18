@@ -6,37 +6,39 @@
     <nav id="sidebar-wrapper">
         <ul class="sidebar-nav">
             <li class="sidebar-brand">
-                <a class="js-scroll-trigger" href="#page-top">{{ 'author'|trans }}</a>
+                <a class="js-scroll-trigger" href="#page-top" title="Nom de l'auteur, remonter en haut de la page">{{ 'author'|trans }}</a>
             </li>
             <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="#page-top">{{ 'app.global.home'|trans }}</a>
+                <a class="js-scroll-trigger" href="#page-top" title="Accueil, remonter en haut de la page">{{ 'app.global.home'|trans }}</a>
             </li>
             <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="#about">{{ 'app.global.about'|trans }}</a>
+                <a class="js-scroll-trigger" href="#about" title="A propos de moi">{{ 'app.global.about'|trans }}</a>
             </li>
             <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="#services">{{ 'app.global.services'|trans }}</a>
+                <a class="js-scroll-trigger" href="#services" title="Mes services">{{ 'app.global.services'|trans }}</a>
             </li>
-            <li class="d-none d-md-block sidebar-nav-item">
-                <a class="js-scroll-trigger" href="#gallery">{{ 'app.global.gallery'|trans }}</a>
+            {% if activities is not empty %}
+                <li class="d-none d-md-block sidebar-nav-item">
+                    <a class="js-scroll-trigger" href="#gallery" title="Ma gallerie">{{ 'app.global.gallery'|trans }}</a>
+                </li>
+            {% endif %}
+            <li class="sidebar-nav-item">
+                <a class="js-scroll-trigger" href="#portfolio" title="Mes projets réalisés ou en cours">{{ 'app.global.portfolio'|trans }}</a>
             </li>
             <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="#portfolio">{{ 'app.global.portfolio'|trans }}</a>
-            </li>
-            <li class="sidebar-nav-item">
-                <a class="js-scroll-trigger" href="#contact">{{ 'app.global.contact'|trans }}</a>
+                <a class="js-scroll-trigger" href="#contact" title="Me contacter">{{ 'app.global.contact'|trans }}</a>
             </li>
             <li class="sidebar-nav-item d-flex flex-row justify-content-center">
-                <a class="social-link rounded-circle text-white mr-3" href="https://twitter.com/kara_redwan" title="Lien vers la page Twitter de {{ 'author'|trans }}">
+                <a class="social-link rounded-circle text-white mr-3" href="https://twitter.com/kara_redwan" target="_blank" title="Lien vers la page Twitter de {{ 'author'|trans }}">
                     <i class="icon-social-twitter"></i>
                 </a>
-                <a class="social-link rounded-circle text-white mr-3" href="https://www.instagram.com/kararedwan/?hl=fr" title="Lien vers la page Instagram de {{ 'author'|trans }}">
+                <a class="social-link rounded-circle text-white mr-3" href="https://www.instagram.com/kararedwan/?hl=fr" target="_blank" title="Lien vers la page Instagram de {{ 'author'|trans }}">
                     <i class="icon-social-instagram"></i>
                 </a>
-                <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/redwan-kara-8014a2183/" title="Lien vers la page LinkedIn de {{ 'author'|trans }}">
+                <a class="social-link rounded-circle text-white mr-3" href="https://www.linkedin.com/in/redwan-kara-8014a2183/" target="_blank" title="Lien vers la page LinkedIn de {{ 'author'|trans }}">
                     <i class="icon-social-linkedin"></i>
                 </a>
-                <a class="social-link rounded-circle text-white" href="https://github.com/RedwanK" title="Lien vers la page Github de {{ 'author'|trans }}">
+                <a class="social-link rounded-circle text-white" href="https://github.com/RedwanK" target="_blank" title="Lien vers la page Github de {{ 'author'|trans }}">
                     <i class="icon-social-github"></i>
                 </a>
             </li>

@@ -8,6 +8,7 @@
 import 'jquery-easing/jquery.easing.1.3';
 import 'font-awesome/scss/font-awesome.scss';
 import 'simple-line-icons/scss/simple-line-icons.scss';
+import '@glidejs/glide/dist/glide.min';
 import 'bootstrap';
 import './main';
 // any CSS you import will output into a single css file (app.css in this case)
