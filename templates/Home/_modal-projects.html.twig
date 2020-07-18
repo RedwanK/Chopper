@@ -17,8 +17,8 @@
 
                             <h5 class="font-weight-normal mb-3">{{ project.name }}</h5>
 
-                            {% if project.shortDescription is not null %}
-                            <div class="text-muted">{{ project.shortDescription|raw }}</div>
+                            {% if project.longDescription is not null %}
+                            <div class="text-muted">{{ project.longDescription }}</div>
                             {% endif %}
 
                             <ul class="list-unstyled font-small mt-5">

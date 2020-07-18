@@ -13,8 +13,8 @@ easy_admin:
                 title: 'Ajouter un projet'
                 fields:
                     - { property: 'name', label: 'Nom du projet' }
-                    - { property: 'shortDescription', label: 'Brève description', type: 'text_editor' }
-                    - { property: 'longDescription', label: 'Description longue', type: 'text_editor' }
+                    - { property: 'shortDescription', label: 'Brève description', type: 'text' }
+                    - { property: 'longDescription', label: 'Description longue', type: 'text' }
                     - { property: 'mainImage', label: 'Image principale', type: 'file_upload', type_options:{ upload_filename: '[name]_[uuid]_[contenthash].[extension]', download_path: 'files/' } }
                     - { property: 'secondImage', label: 'Image secondaire', type: 'file_upload', type_options:{ upload_filename: '[name]_[uuid]_[contenthash].[extension]', download_path: 'files/' } }
                     - { property: 'thirdImage', label: 'Image tertiaire', type: 'file_upload', type_options:{ upload_filename: '[name]_[uuid]_[contenthash].[extension]', download_path: 'files/' } }
