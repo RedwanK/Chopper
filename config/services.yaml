@@ -11,6 +11,12 @@ services:
     _defaults:
         bind:
             $contactMail: '%contact%'
+            $consumerKey: '%env(CONSUMER_KEY)%'
+            $consumerSecret: '%env(CONSUMER_SECRET)%'
+            $accessToken: '%env(ACCESS_TOKEN)%'
+            $accessSecret: '%env(ACCESS_SECRET)%'
+            $twitterConnector: '@App\Services\Connector\TwitterConnector'
+            $twitterScreenName: '%env(TWITTER_NAME)%'
         autowire: true      # Automatically injects dependencies in your services.
         autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
 

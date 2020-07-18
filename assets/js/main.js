@@ -1,3 +1,5 @@
+import Glide from '@glidejs/glide';
+
 (function($) {
   "use strict"; // Start of use strict
 
@@ -133,4 +135,24 @@ window.onload = function() {
   css.type = "text/css";
   css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
   document.body.appendChild(css);
+  new Glide('.glide', {
+    type: 'carousel',
+    startAt: 0,
+    perView: 4,
+    autoplay: 3000,
+    hoverpause: false,
+    breakpoints: {
+      1199: {
+        perview: 3
+      },
+      800: {
+        perView: 2
+      },
+      600: {
+        perView: 1
+      }
+    }
+  }).mount();
 };
+
+

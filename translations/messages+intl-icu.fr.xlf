@@ -245,6 +245,14 @@
         <source>app.meta.og_description</source>
         <target>Développement de sites internet sur mesure et à moindre coût. N'hésitez pas à me contacter pour un devis gratuit.</target>
       </trans-unit>
+      <trans-unit id="5kxETK." resname="app.home.tweets.title">
+        <source>app.home.tweets.title</source>
+        <target>Mes derniers tweets</target>
+      </trans-unit>
+      <trans-unit id="qFw557q" resname="app.global.tweets">
+        <source>app.global.tweets</source>
+        <target>Tweets</target>
+      </trans-unit>
     </body>
   </file>
 </xliff>
